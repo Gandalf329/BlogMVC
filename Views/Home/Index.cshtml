@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BlogMVC.Models.Post>
+@{
+    ViewData["Title"] = "Home Page";
+}
+ 
+<p><a asp-action="Create">Add post</a></p>
+<table class="table">
+     <tr><th>Title</th><th>Text</th><th>Date</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Text</td>
+            <td>@item.CreatedDate</td>
+        </tr>
+    }
+</table>

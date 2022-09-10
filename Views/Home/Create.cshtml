@@ -1,0 +1,20 @@
+﻿@model BlogMVC.Models.Post
+ 
+<h2>Добавление пользователя</h2>
+<form asp-action="create" asp-controller="home">
+    <p>
+        <label asp-for="Title">Title</label><br />
+        <input type="text" asp-for="Title" />
+    </p>
+    <p>
+        <label asp-for="Text">Text</label><br />
+        <input type="text" asp-for="Text" />
+    </p>
+    <p>
+        <label asp-for="CreatedDate">Date</label><br />
+        <input type="datetime" asp-for="CreatedDate" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
