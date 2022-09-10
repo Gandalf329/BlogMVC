@@ -12,6 +12,14 @@
             <td>@item.Title</td>
             <td>@item.Text</td>
             <td>@item.CreatedDate</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Edit</a>
+            </td>
+            <td>
+                <form asp-controller="Home" asp-action="Delete" method="post"  asp-route-id="@item.Id">
+                    <input type="submit" value="Delete" />
+                </form>
+            </td>
         </tr>
     }
 </table>
