@@ -13,6 +13,9 @@
             <td>@item.Text</td>
             <td>@item.CreatedDate</td>
             <td>
+                <a asp-action="Post" asp-controller="Home" asp-route-id="@item.Id">Post</a>
+            </td>
+            <td>
                 <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Edit</a>
             </td>
             <td>

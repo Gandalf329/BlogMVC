@@ -1,6 +1,6 @@
 ﻿@model BlogMVC.Models.Post
  
-<h2>Редактирование пользователя</h2>
+<h2>Edit post</h2>
 <form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
     <p>
         <label asp-for="Title">Title</label><br />
@@ -8,7 +8,7 @@
     </p>
     <p>
         <label asp-for="Text">Text</label><br />
-        <input type="text" asp-for="Text" />
+        <textarea type="text" asp-for="Text" ></textarea>
     </p>
     <p>
         <label asp-for="CreatedDate">Date</label><br />

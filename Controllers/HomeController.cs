@@ -55,7 +55,16 @@ namespace BlogMVC.Controllers
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Post(int? id)
+        {
 
+            if (id != null)
+            {
+                Post? post = await db.Posts.FirstOrDefaultAsync(p => p.Id == id);
+                if (post != null) return View(post);
+            }
+            return NotFound();
+        }
         public IActionResult Privacy()
         {
             return View();
