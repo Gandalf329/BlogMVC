@@ -21,8 +21,21 @@ namespace BlogMVC.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Post post)
+        public async Task<IActionResult> Create(PostViewModel postVM)
         {
+            Console.WriteLine(postVM.Title);
+            Console.WriteLine("1");
+            Console.WriteLine(postVM.Photo);
+            Post post = new Post { Title = postVM.Title, CreatedDate = postVM.CreatedDate, Text = postVM.Text };
+            if (postVM.Photo != null)
+            {
+                byte[] imageData = null;
+                using (var binaryReader = new BinaryReader(postVM.Photo.OpenReadStream()))
+                {
+                    imageData = binaryReader.ReadBytes((int)postVM.Photo.Length);
+                }
+                post.Photo = imageData;
+            }
             db.Posts.Add(post);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

@@ -1,6 +1,11 @@
 ﻿@model BlogMVC.Models.Post
  
+<div class="photoTitle">@if (Model.Photo != null)
+    {
+        <img class="photoTitle" src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Photo))" />
+    }
 
+</div>
 <h3>@Model.Title</h3>
 <a>@Model.CreatedDate</a>
 <div>

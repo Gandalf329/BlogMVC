@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+.photoTitle {
+    margin: 50px auto;
+    max-width: 1000px;
+}
+.createText {
+    min-width:850px;
+    max-width: 1000px;
+    height: 200px;
+}
