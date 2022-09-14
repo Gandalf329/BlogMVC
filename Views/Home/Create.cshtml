@@ -1,24 +1,26 @@
 ﻿@model BlogMVC.Models.PostViewModel
- 
-<h2>Добавление пользователя</h2>
-<form asp-action="create" asp-controller="home" enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Title">Title</label><br />
-        <input type="text" asp-for="Title" />
-    </div>
-<p>
-        <label asp-for="Photo" class="control-label">Photo</label>
-        <input name="Photo" type="file" class="form-control" />
-        </p>
-    <div class="form-group">
-        <label asp-for="Text">Text</label><br />
-        <textarea class="createText" type="text" asp-for="Text" ></textarea>
-    </div>
-    <div class="form-group">
-        <label asp-for="CreatedDate">Date</label><br />
-        <input type="datetime" asp-for="CreatedDate" />
-    </div>
-    <p>
-        <input type="submit" value="Отправить" />
-    </p>
-</form>
+<div class="containerIndex">
+    <h2 style="margin:10px; padding:5px">Create post</h2>
+    <form asp-action="create" asp-controller="home" enctype="multipart/form-data">
+        <div class="form-group create-field">
+            <label asp-for="Title">Title</label><br />
+            <input class="form-control form-post" type="text" asp-for="Title" />
+        </div>
+        <div class="create-field">
+            <label asp-for="Photo" class="control-label">Photo</label>
+            <input name="Photo" type="file" class="form-control form-post" />
+        </div>
+        <div class="form-group create-field ">
+            <label asp-for="Text">Text</label><br />
+            <textarea class="createText" type="text" asp-for="Text" ></textarea>
+        </div>
+        <div class="form-group create-field">
+            <label asp-for="CreatedDate">Date</label><br />
+            <input class="form-control form-post" type="datetime" asp-for="CreatedDate" />
+        </div>
+        <div class="create-field">
+            <input class="button_green" type="submit" value="Отправить" />
+        
+        </div>
+    </form>
+</div>

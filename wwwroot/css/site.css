@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  background: #f5f6f8;
 }
 
 @media (min-width: 768px) {
@@ -14,14 +15,279 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background: #f5f6f8;    
+    line-height: 1.4;
+    font-family: 'Ubuntu', Helvetica, Verdana, sans-serif;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: 0.01rem;
+    text-rendering: optimizeSpeed;
+}
+.header {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    min-width: 320px;
+    font-size: 17px;
+    height: 50px;
+    margin: 0 auto;
+}
+.navbar-nav {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 320px;
+    height: 50px;
+    margin: 0 auto;
+    padding-left: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1002;
+    padding: 0;
+}
+.nav-item {
+    margin: 0;
+    margin-left: 0px;
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    margin-left: 2%;
+    line-height: 43px;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+    font-style: normal;
+}
+.nav-link {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFF;
+    text-decoration: none;
+    padding: 0 10px;
+    outline-offset: -0.22222em;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transition: opacity .2s cubic-bezier(0.645,0.045,0.355,1);
+    -moz-transition: opacity .2s cubic-bezier(0.645,0.045,0.355,1);
+    transition: opacity .2s cubic-bezier(0.645,0.045,0.355,1);
+}
+.footer {
+    display: block;
+    margin: 20px auto 100px;
+    max-width: 700px;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 90%;
 }
 .photoTitle {
     margin: 50px auto;
     max-width: 1000px;
 }
 .createText {
-    min-width:850px;
+    width:100%;
+    min-height:350px;
+}
+.create-field {
+    padding: 5px;
+    margin: 10px;
+}
+.containerIndex {
+    margin-top: 20px;
+    max-width: 1400px;
+    padding: 0 10px;
+    margin: 50px auto 0;
+    position: relative;
+    display: block;
+    clear: both;
+    min-width: 320px;
+    min-height: 500px;
+}
+.stories_block_3x {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.story {
+    width: 30%;
+    font-size: 13px;
+    box-sizing: border-box;
+    margin: 0 0 40px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    min-width: 300px;
+    min-height: 210px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 10px 10px 30px #CCC;
+    transition: all 0.5s;
+    transform: translateZ(0);
+    border-radius: 30px;
+    object-fit: cover;
     max-width: 1000px;
-    height: 200px;
+}
+.story:hover{
+    transform:scale(1.05);
+}
+    .story:hover  .story_title{
+        background-color: #333;
+        color: #FFF;
+        transition: all 0.3s;
+    }
+.story_info {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    z-index: 20;
+    padding: 0 20px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.story_title {
+    display: inline;
+    margin-top: 10px;
+    font-size: 200%;
+    font-weight: 500;
+    line-height: 1.3em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-color: #FFF;
+    color: #000;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+.form-post {
+    min-width: 350px;
+    max-width: 500px;
+}
+.button_green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #80ed99;
+    box-shadow: 0 5px #57cc99;
+}
+
+    .button_green:hover {
+        box-shadow: 0 3px #57cc99;
+        top: 1px;
+    }
+
+    .button_green:active {
+        box-shadow: 0 0 #57cc99;
+        top: 5px;
+    }
+.title {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    min-height: 450px;
+}
+.title-photo {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 10;
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 300px;
+}
+.title-info {
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    font-weight: 400;
+    width: 100%;
+    margin: 27px auto;
+    box-sizing: border-box;
+    color: #FFF;
+    text-align: center;
+    z-index: 20;
+    font-size: 42px;
+}
+.title-name {
+    display: inline;
+    font-size: 150%;
+    font-weight: 500;
+    line-height: 1.3em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-color: #FFF;
+    color: #000;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.title-date {
+    display: block;
+    font-size: 14px;
+    margin-top: 10%;
+    color: #FEFEFE;
+}
+.post {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    letter-spacing: 0.01rem;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.67;
+    color: #464848;
+    font-family: 'Merriweather', Georgia, Times, serif;
+    font-weight: 300;
+}
+.post-text {
+    width: 100%;
+    background-color: #FFF;
+    margin: 40px auto 40px;
+    position: relative;
+    display: block;
+    padding: 40px 60px;
+    clear: both;
+    box-sizing: border-box;
+    border-radius: 30px;
+    max-width: 900px;
+    min-width: 200px;
+    font-weight: 400;
+    font-style: normal;
+}
+.cover {
+    visibility: hidden;
+    width: 100%;
+    min-height: 270px;
+    vertical-align: middle;
+}
+.containerPost {
+    background: #f5f6f8;
+    position: relative;
+    display: block;
+    clear: both;
+    min-width: 320px;
+    min-height: 500px;
 }
